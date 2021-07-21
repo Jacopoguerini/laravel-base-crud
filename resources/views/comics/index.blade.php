@@ -11,8 +11,6 @@
                     <th class="col-1">ID</th>
                     <th class="col-4">Titolo</th>
                     <th class="col-4">Serie</th>
-                    <th class="col-1">Prezzo</th>
-                    <th class="col-1">Data</th>
                     <th class="col-1">Dettagli</th>
                     <th class="col-1">Modifica</th>
                     <th class="col-1">Elimina</th>
@@ -25,8 +23,6 @@
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->series }}</td>
-                        <td>&#36; {{ $item->price}}</td>
-                        <td>{{ $item->date}}</td>   
 
                         <td>
                             <a href="{{ route("comics.show", $item->id) }}" class="btn btn-primary">

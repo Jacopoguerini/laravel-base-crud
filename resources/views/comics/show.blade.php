@@ -11,8 +11,8 @@
             <div class="m-4 col-8 d-flex flex-column">
                 <h5>Data di pubblicazione: {{ $comic->date }}</h5>
                 <p>{{ $comic->description }}</p>
-                <h5>Price: &#36; {{ $comic->price }}</h5>
-                <h6>Tipo: {{ $comic->type }}</h6>
+                <h5>Prezzo: &#36; {{ $comic->price }}</h5>
+                <h6 style="text-transform: capitalize">Tipo: {{ $comic->type }}</h6>
             </div>
         </div>
     </div>
