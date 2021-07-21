@@ -8,7 +8,7 @@
 
         <li class="nav-item">
           <a href="{{ route("comics.index") }}" class="nav-link {{ Route::currentRouteName() == 'comics.index' ? 'active' : '' }}">
-            Comics List
+            Elenco Fumetti
           </a>
         </li>
 
