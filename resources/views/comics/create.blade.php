@@ -35,11 +35,11 @@
             <div class="mt-2">
                 <label for="type">Tipo di fumetto</label>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="type" name="type" class="custom-control-input">
+                    <input type="radio" id="type" name="type" class="custom-control-input" value="comic book">
                     <label class="custom-control-label" for="type">Comic Book</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="type" name="type" class="custom-control-input">
+                    <input type="radio" id="type" name="type" class="custom-control-input" value="graphic novel">
                     <label class="custom-control-label" for="type">Graphic Novel</label>
                 </div>
             </div>
