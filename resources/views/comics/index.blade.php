@@ -35,7 +35,7 @@
                         </td>  
 
                         <td>
-                            <a href="{{ route("comics.edit", $item->id) }}" class="btn btn-secondary">
+                            <a href="{{ route("comics.edit", $item->id) }}" class="btn btn-warning">
                                 Modifica
                             </a>
                         </td> 
