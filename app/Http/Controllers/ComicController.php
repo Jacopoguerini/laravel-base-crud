@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::paginate(4);
+        $comics = Comic::paginate(6);
         return view("comics.index", compact('comics'));
     }
 
@@ -48,9 +48,7 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return redirect()
-            ->route('comics.show', $comic->id)
-            ->with('message', "Fumetto '" . $comic->name . "' aggiunto correttamente");
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

@@ -30,11 +30,11 @@
                                 Dettagli
                             </a>
                         </td>                     
-                        {{-- <td>
+                        <td>
                             <a href="{{ route("comics.edit", $item->id) }}" class="btn btn-secondary">
                                 Modifica
                             </a>
-                        </td>  --}}
+                        </td> 
                     </tr> 
                 @endforeach
             </tbody>
