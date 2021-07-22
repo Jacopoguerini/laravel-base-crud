@@ -2,7 +2,15 @@
 
 @section('main-content')
     <div class="container d-flex flex-column justify-content-center align-items-center">
+
         <h3 class="text-center">{{ $comic->title }} - {{$comic->series}}</h3>
+
+        @if (session('message'))
+            <div class="alert alert-success mb-4">
+                {{ session('message') }}
+            </div>
+        @endif
+
         <a href="{{ route("comics.edit", $comic->id) }}" class="btn btn-warning">
             Modifica fumetto
         </a>

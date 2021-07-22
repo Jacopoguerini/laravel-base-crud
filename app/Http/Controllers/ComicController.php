@@ -48,7 +48,9 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()
+            ->route('comics.show', $comic->id)
+            ->with('message', "Fumetto '" . $comic->title . "' creato correttamente");;
     }
 
     /**
@@ -89,7 +91,9 @@ class ComicController extends Controller
         $data["slug"] = Str::slug($slug, '-');        
         $comic->update($data);
         
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()
+            ->route('comics.show', $comic->id)
+            ->with('message', "Fumetto '" . $comic->title . "' modificato correttamente");;
     }
 
     /**
@@ -103,6 +107,7 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()
-            ->route('comics.index');
+            ->route('comics.index')
+            ->with('deleted', "Fumetto '" . $comic->title . "' eliminato correttamente");
     }
 }

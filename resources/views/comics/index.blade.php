@@ -1,11 +1,18 @@
 @extends('layouts.main')
 
 @section('main-content')
+
     <h1 class="text-center mb-3">Elenco Comics</h1>
 
     <div class="container">
 
-        <table class="m-2 table table-striped table-light table-hover">
+        @if (session('deleted'))
+            <div class="alert alert-success">
+                {{ session('deleted') }}
+            </div>
+        @endif
+
+        <table class="mt-2 mb-2 table table-striped table-light table-hover">
             <thead>
                 <tr>
                     <th class="col-1">ID</th>
