@@ -50,7 +50,7 @@ class ComicController extends Controller
 
         return redirect()
             ->route('comics.show', $comic->id)
-            ->with('message', "Fumetto '" . $comic->title . "' creato correttamente");;
+            ->with('message', "Fumetto '" . $comic->title . "' creato con successo.");;
     }
 
     /**
@@ -93,7 +93,7 @@ class ComicController extends Controller
         
         return redirect()
             ->route('comics.show', $comic->id)
-            ->with('message', "Fumetto '" . $comic->title . "' modificato correttamente");;
+            ->with('message', "Fumetto '" . $comic->title . "' modificato con successo.");;
     }
 
     /**
@@ -108,6 +108,6 @@ class ComicController extends Controller
 
         return redirect()
             ->route('comics.index')
-            ->with('deleted', "Fumetto '" . $comic->title . "' eliminato correttamente");
+            ->with('deleted', "Fumetto '" . $comic->title . "' eliminato con successo.");
     }
 }

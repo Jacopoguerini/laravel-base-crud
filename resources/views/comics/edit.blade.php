@@ -17,27 +17,27 @@
             @method('PATCH')
             <div class="form-group mt-1">
                 <label for="title">Titolo</label>
-                <input type="text" class="form-control" id="title" placeholder="Inserisci il titolo del fumetto" name="title" required value="{{ $comic->title }}" required>
+                <input type="text" class="form-control" id="title" placeholder="Inserisci il titolo del fumetto" name="title" required value="{{ old('title', $comic->title) }}" required>
             </div>
             
             <div class="form-group mt-1">
                 <label for="description">Descrizione del fumetto</label>
-                <textarea class="form-control" id="description" name="description" placeholder="Inserisci la descrizione del fumetto" rows="4" required>{{ $comic->description }}</textarea>
+                <textarea class="form-control" id="description" name="description" placeholder="Inserisci la descrizione del fumetto" rows="4" required>{{ old('description', $comic->description) }}</textarea>
             </div>
 
             <div class="form-group mt-1">
                 <label for="thumb">Url Cover</label>
-                <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'url dell'immagine di copertina" name="thumb" value="{{ $comic->thumb }}" required>
+                <input type="text" class="form-control" id="thumb" placeholder="Inserisci l'url dell'immagine di copertina" name="thumb" value="{{ old('thumb', $comic->thumb) }}" required>
             </div>
 
             <div class="form-group mt-1">
                 <label for="price">Prezzo</label>
-                <input type="number" step="0.01" class="form-control" id="price" placeholder="Inserisci il prezzo del fumetto" name="price" value="{{ $comic->price }}" required>
+                <input type="number" step="0.01" class="form-control" id="price" placeholder="Inserisci il prezzo del fumetto" name="price" value="{{ old('price', $comic->price) }}" required>
             </div>
 
             <div class="form-group mt-1">
                 <label for="series">Serie di appartenenza</label>
-                <input type="text" class="form-control" id="series" placeholder="Inserisci il nome della serie a cui il fumetto appartiene" name="series" value="{{ $comic->series }}" required>
+                <input type="text" class="form-control" id="series" placeholder="Inserisci il nome della serie a cui il fumetto appartiene" name="series" value="{{ old('series', $comic->series) }}" required>
             </div>
 
             <div class="mt-2">
@@ -54,7 +54,7 @@
 
             <div class="form-group mt-1">
                 <label for="date">Data di pubblicazione</label>
-                <input type="date" class="form-control" id="date" placeholder="Inserisci la data di pubblicazione" name="date" value="{{ $comic->date }}" required>
+                <input type="date" class="form-control" id="date" placeholder="Inserisci la data di pubblicazione" name="date" value="{{ old('date', $comic->date) }}" required>
             </div>
 
             <a href="{{ route('comics.index') }}" class="btn btn-secondary mt-3 me-3">Elenco fumetti</a>
